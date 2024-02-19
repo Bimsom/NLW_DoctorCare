@@ -136,9 +136,6 @@ header img {
 /*====================NAVIGATION=====================*/
 nav {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-
     height: var(--nave-height);
 
     position: fixed;
@@ -147,15 +144,21 @@ nav {
     transform: translateX(-50%);
 }
 
-/*nav.wrapper {
-    
-}*
+nav.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 nav.scroll {
     background: var(--cor-primaria);
     width: 100vw;
 }
 
-nav.scroll svg path {
+nav.scroll svg:nth-child(1) path {
     fill: white;
+}
+
+nav.scroll svg:nth-child(2) path {
+    stroke: white;
 }
