@@ -53,6 +53,142 @@ section {
     padding-block: 10rem;
 }
 
+/*====================NAVIGATION=====================*/
+nav {
+    display: flex;
+    height: var(--nave-height);
+
+    position: fixed;
+    top: 0;
+    width: 100vw;
+
+    z-index: 100;
+}
+
+nav .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav.scroll {
+    background: var(--cor-primaria);
+
+}
+
+nav.scroll .logo path {
+    fill: white;
+}
+
+nav.scroll button path {
+    stroke: white;
+}
+
+nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/*====================MENU-EXPANDED=====================*/
+
+body.menu-expanded > :not(nav) {
+    visibility: hidden;
+ }
+
+.menu,
+.close-menu,
+body.menu-expanded .open-menu {
+    opacity: 0;
+    visibility: hidden;
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.menu-expanded {
+    overflow: hidden;
+}
+
+.menu {
+    transform: translateY(100%);
+}
+
+body.menu-expanded .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--cor-primaria);
+
+    width: 100vw;
+    height: 180vw;
+
+    padding-top: var(--nave-height);
+
+    transition: transform 300ms;
+    transform: translateY(0);
+}
+
+.menu ul:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+    
+    margin-top: 6rem;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3,1rem;
+
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+.menu .button {
+    background: white;
+    border-radius: 4rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: var(--cor-primaria);
+
+    display: inline-block;
+    padding: 1.6rem 3.2rem;
+
+    margin-top: 4.8rem;
+    margin-bottom: 8rem;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+}
+
+body.menu-expanded .logo,
+body.menu-expanded button {
+    position: relative;
+    z-index: 100;
+
+}
+
+body.menu-expanded .logo path {
+    fill: white;
+}
+
+body.menu-expanded button path {
+    stroke: white;
+}
+
+
 /*====================HOME=====================*/
 
 #home {
@@ -154,145 +290,6 @@ section {
 #home .stat p {
     margin: 0;
     color: var(--cor-primaria);
-}
-
-/*====================NAVIGATION=====================*/
-nav {
-    display: flex;
-    height: var(--nave-height);
-
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-
-    z-index: 100;
-}
-
-nav .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-nav.scroll {
-    background: var(--cor-primaria);
-    width: 100vw;
-}
-
-nav.scroll svg:nth-child(1) path {
-    fill: white;
-}
-
-nav.scroll button path {
-    stroke: white;
-}
-
-nav button {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-/*====================MENU-EXPANDED=====================*/
-
-body.menu-expanded nav {
-    position: relative;
-}
- body.menu-expanded > :not(nav) {
-    display: none;
- }
-
-.menu,
-.close-menu,
-body.menu-expanded .open-menu {
-    opacity: 0;
-    visibility: hidden;
-}
-
-body.menu-expanded .menu,
-body.menu-expanded .close-menu {
-    opacity: 1;
-    visibility: visible;
-}
-
-body.menu-expanded {
-    overflow: hidden;
-}
-
-.menu {
-    transform: translateY(100%);
-}
-
-body.menu-expanded .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: var(--cor-primaria);
-
-    width: 100vw;
-    height: 180vw;
-
-    padding-top: var(--nave-height);
-
-    transition: transform 300ms;
-    transform: translateY(0);
-}
-
-.menu ul:nth-child(1){
-    display: flex;
-    flex-direction: column;
-    gap: 4.8rem;
-    
-    margin-top: 6rem;
-    font-weight: 700;
-    font-size: 2.4rem;
-    line-height: 3,1rem;
-
-}
-
-.menu ul li a {
-    color: white;
-    text-decoration: none;
-}
-.menu .button {
-    background: white;
-    border-radius: 4rem;
-    font-weight: 700;
-    font-size: 1.8rem;
-    line-height: 2.3rem;
-    text-transform: uppercase;
-    text-decoration: none;
-
-    color: var(--cor-primaria);
-
-    display: inline-block;
-    padding: 1.6rem 3.2rem;
-
-    margin-top: 4.8rem;
-    margin-bottom: 8rem;
-}
-
-.social-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3.2rem;
-}
-
-body.menu-expanded .logo,
-body.menu-expanded button {
-    position: relative;
-    z-index: 100;
-
-}
-
-body.menu-expanded .logo path {
-    fill: white;
-}
-
-body.menu-expanded button path {
-    stroke: white;
 }
 
 /*====================SERVICE=====================*/
