@@ -23,4 +23,7 @@ ScrollReveal({
 #home img,
 #home .stats,
 #Services header,
-#Services .card`);
+#Services .card
+#about
+#about .header
+#about .content`);
